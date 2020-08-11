@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	font-family: 'Guardian Text Egyptian Web', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+	touch-action: manipulation;
+	cursor: pointer;
+	overflow: visible;
+	text-transform: none;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	cursor: pointer;
+	touch-action: manipulation;
+	background: transparent;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	border-bottom: 0.0625rem solid rgb(153, 153, 153);
+	transition: border-color 0.15s ease-out 0s;
+}
+
+a:hover {
+	border-color: rgb(255, 255, 255);
+}
+
+menu,
+ol,
+ul {
+	padding: 0;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}

@@ -1,0 +1,307 @@
+.bannerStyles {
+	background-color: rgb(5, 41, 98);
+	color: rgb(255, 255, 255);
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	right: 0px;
+	z-index: 9999;
+	border-top: 1px solid rgb(80, 105, 145);
+
+	.outerContainerStyles {
+		display: block;
+		height: 100%;
+		position: relative;
+		margin: 0px auto;
+
+		@media (min-width: 740px) {
+			max-width: 740px;
+		}
+		@media (min-width: 980px) {
+			max-width: 980px;
+		}
+		@media (min-width: 1140px) {
+			max-width: 1140px;
+		}
+
+		.roundelContainerStyles {
+			position: absolute;
+			width: auto;
+			height: auto;
+			display: none;
+			padding: 0px;
+
+			@media (min-width: 1140px) {
+				top: 12px;
+				left: 20px;
+				right: auto;
+				bottom: auto;
+				display: block;
+			}
+		}
+
+		.content {
+			display: block;
+			padding-bottom: 12px;
+			max-width: 700px;
+			height: 100%;
+			box-sizing: content-box;
+			margin: 0px 10px;
+
+			@media (max-width: 479px) {
+				display: flex;
+				flex-direction: column;
+			}
+			@media (min-width: 480px) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			@media (min-width: 1140px) {
+				padding-left: 170px;
+				padding-right: 0px;
+				padding-bottom: 24px;
+			}
+
+			p {
+				font-size: 1.0625rem;
+				line-height: 1.5;
+				font-weight: 400;
+			}
+
+			.title {
+				font-size: 28px;
+				font-weight: 700;
+				line-height: 1.5;
+
+				@media (min-width: 1140px) {
+					font-size: 34px;
+				}
+			}
+
+			.mobileScrollable {
+				@media (max-width: 479px) {
+					padding-bottom: 77px;
+					height: 100%;
+					overflow-y: scroll;
+				}
+
+				p {
+					margin-bottom: 8px;
+				}
+
+				button {
+					border-top-style: initial;
+					border-right-style: initial;
+					border-left-style: initial;
+					border-top-color: initial;
+					border-right-color: initial;
+					border-left-color: initial;
+					color: rgb(255, 255, 255);
+					background: transparent;
+					padding: 0px;
+					border-width: 0px 0px 0.0625rem;
+					border-image: initial;
+					text-decoration: none;
+					border-bottom: 0.0625rem solid rgb(153, 153, 153);
+					transition: border-color 0.15s ease-out 0s;
+					font: inherit;
+				}
+
+				.expandButton {
+					color: rgb(255, 255, 255);
+					background-color: transparent;
+					position: relative;
+					margin-left: -4px;
+					margin-bottom: 0px;
+					font-size: 1.0625rem;
+					line-height: 1.5;
+					font-weight: 400;
+					font-family: 'Guardian Text Egyptian Web', Georgia, serif;
+					border-width: 0px;
+					border-style: initial;
+					border-color: initial;
+					border-image: initial;
+					padding: 0px 0px 0px 24px;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 6px;
+						left: 6px;
+						display: inline-block;
+						transform: rotate(45deg);
+						height: 6px;
+						width: 6px;
+						border-width: 0px 2px 2px 0px;
+						border-style: solid solid;
+						border-color: rgb(255, 255, 255) rgb(255, 255, 255);
+						border-image: initial;
+						border-top: 0px;
+						border-left: 0px;
+					}
+
+					&.showExpandButton {
+						&::before {
+							content: '';
+							position: absolute;
+							top: 10px;
+							left: 6px;
+							display: inline-block;
+							transform: rotate(-135deg);
+							height: 6px;
+							width: 6px;
+							border-width: 0px 2px 2px 0px;
+							border-style: solid solid;
+							border-color: rgb(255, 255, 255) rgb(255, 255, 255);
+							border-image: initial;
+							border-top: 0px;
+							border-left: 0px;
+						}
+					}
+				}
+
+				.list {
+					max-height: 0px;
+					overflow-y: hidden;
+					padding-left: 36px;
+					margin: 0px;
+					transition: max-height 0.15s ease-out 0s;
+					list-style: none;
+
+					&.showList {
+						max-height: 500px;
+						overflow-y: hidden;
+						padding-left: 36px;
+						margin: 0px 0px 8px;
+						transition: max-height 0.25s ease-in 0s;
+						list-style: none;
+					}
+
+					li {
+						padding-left: 4px;
+						font-size: 1.0625rem;
+						line-height: 1.5;
+						font-weight: 400;
+						font-family: 'Guardian Text Egyptian Web', Georgia, serif;
+
+						&::before {
+							display: inline-block;
+							content: '';
+							height: 12px;
+							width: 12px;
+							margin-right: 8px;
+							margin-left: -20px;
+							background-color: rgb(80, 105, 145);
+							border-radius: 6px;
+						}
+					}
+				}
+			}
+
+			.buttonContainerStyles {
+				@media (max-width: 479px) {
+					padding-left: 10px;
+					padding-right: 10px;
+					padding-top: 8px;
+					padding-bottom: 12px;
+					position: absolute;
+					bottom: 0px;
+					left: 0px;
+					right: 0px;
+					backdrop-filter: blur(6px);
+					border-top: 1px solid rgb(80, 105, 145);
+					background: rgba(5, 41, 98, 0.4);
+				}
+
+				@media (min-width: 480px) {
+					margin-top: 20px;
+				}
+
+				.okButton {
+					display: inline-flex;
+					-webkit-box-pack: justify;
+					justify-content: space-between;
+					-webkit-box-align: center;
+					align-items: center;
+					box-sizing: border-box;
+					cursor: pointer;
+					white-space: nowrap;
+					font-size: 1.0625rem;
+					line-height: 1.5;
+					font-weight: 700;
+					height: 36px;
+					min-height: 36px;
+					color: rgb(5, 41, 98);
+					flex-direction: row-reverse;
+					font-family: 'Guardian Text Sans Web', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+					border-width: initial;
+					border-style: none;
+					border-color: initial;
+					border-image: initial;
+					background: rgb(255, 255, 255);
+					transition: all 0.3s ease-in-out 0s;
+					text-decoration: none;
+					padding: 0px 18px 2px;
+					border-radius: 18px;
+
+					&:hover {
+						background-color: rgb(224, 224, 224);
+					}
+					&:focus {
+						box-shadow: rgb(0, 178, 255) 0px 0px 0px 5px;
+						z-index: 9;
+						outline: 0px;
+					}
+
+					svg {
+						margin: 0px 9px 0px -4.5px;
+						display: block;
+						fill: currentcolor;
+						position: relative;
+						width: 18px;
+						height: auto;
+						flex: 0 0 auto;
+					}
+				}
+
+				.optionButton {
+					display: inline-flex;
+					-webkit-box-pack: justify;
+					justify-content: space-between;
+					-webkit-box-align: center;
+					align-items: center;
+					box-sizing: border-box;
+					cursor: pointer;
+					white-space: nowrap;
+					font-size: 1.0625rem;
+					line-height: 1.5;
+					font-weight: 700;
+					height: 36px;
+					min-height: 36px;
+					color: rgb(255, 255, 255);
+					font-family: 'Guardian Text Sans Web', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+					border-width: initial;
+					border-style: none;
+					border-color: initial;
+					border-image: initial;
+					background: rgb(80, 105, 145);
+					transition: all 0.3s ease-in-out 0s;
+					text-decoration: none;
+					padding: 0px 18px 2px;
+					border-radius: 18px;
+					margin-left: 12px;
+
+					&:focus {
+						box-shadow: rgb(0, 178, 255) 0px 0px 0px 5px;
+						z-index: 9;
+						outline: none;
+					}
+					&:hover {
+						background-color: rgb(35, 75, 138);
+					}
+				}
+			}
+		}
+	}
+}
